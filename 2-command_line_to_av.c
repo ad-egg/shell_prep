@@ -5,16 +5,18 @@
  * main - splits a string
  * Return: Always 0
  */
-int main(void)
+int main(int argc, char **argv)
 {
-	char str[] = "The world is quiet here.";
+	char *token;
+	int i;
 
-	char *token = strtok(str, " ");
+	if (argc == 1)
+		return (0);
 
-	while (token != NULL)
+	for (i = 1; argv[i] != NULL; i++)
 	{
+		token = strtok(argv[i], " ");
 		printf("%s\n", token);
-		token = strtok(NULL, " ");
 	}
 	return (0);
 }
