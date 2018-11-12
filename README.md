@@ -9,7 +9,7 @@ gcc -Wall -Wextra -Werror -pedantic code.c -o executable_file
 
 ## 0-getppid.c
 This program prints the PID of the parent process.
-# 1-max_process_id
+## 1-max_process_id
 This bash shell script prints the maximum value a process ID can be.
 ## 0-av.c
 This program prints all the arguments without using `a`.
