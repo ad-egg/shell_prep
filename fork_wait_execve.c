@@ -23,7 +23,7 @@ int main(void)
 			if (execve(argv[0], argv, NULL) == -1)
 				perror("Error:");
 		}
-		else if ((pid > 0) && (i != 5))
+		else
 			wait(NULL);
 	}
 	return (0);
