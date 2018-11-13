@@ -1,21 +1,62 @@
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
+#define BUFFERSIZE 1024
 
 /**
- * main - splits a string
- * Return: Always 0
+ * _realloc - reallocates a memory block
+ * @ptr: pointer to memory block
+ * @old_size: allocated space for ptr
+ * @new_size: reallocated space for ptr
+ * Return: pointer to reallocated memory block
  */
-int main(int argc, char **argv)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *token;
+	char *newptr;
+	unsigned int i;
 
-	if (argc == 1)
-		return (0);
-	token = strtok(*argv, " ");
-	while (token != NULL)
+	if (new_size == old_size)
+		return (ptr);
+	if ((new_size == 0) && (ptr != NULL))
 	{
-		printf("%s\n", token);
+		free(ptr);
+		return (NULL);
+	}
+	newptr = malloc(new_size);
+	if (newptr == NULL)
+		return (NULL);
+	if (ptr != NULL)
+	{
+		for (i = 0; (i < old_size) && (i < new_size); i++)
+			newptr[i] = ((char *)ptr)[i];
+		free(ptr);
+	}
+	return (newptr);
+}
+
+/**
+ * split_line - splits a string
+ * @line: string to be split
+ * Return: pointer to array of arrays
+ */
+char **split_string(char *line)
+{
+	char **tokens, *token;
+	int i, buffsize;
+
+	tokens = malloc(sizeof(char) * buffsize);
+	if (tokens == NULL)
+		return (NULL);
+	token = strtok(line, " ");
+	for (i = 0; token != NULL; i++)
+	{
+		tokens[i] = token;
+		if (i >= buffsize)
+		{
+			buffsize += BUFFERSIZE;
+			tokens = _realloc(tokens, sizeof(char) * buffsize);
+		}
 		token = strtok(NULL, " ");
 	}
-	return (0);
+	tokens[i] = NULL;
 }
