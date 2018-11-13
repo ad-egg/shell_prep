@@ -9,11 +9,14 @@
  * @env: NULL terminated array of strings
  * Return: 0 on success
  */
+
+extern char **environ;
+
 int main(int ac, char **av, char **env)
 {
 	int i;
 
-	for (i = 0; env[i] != NULL; i++)
+	for (i = 0; environ[i] != NULL; i++)
 	{
 		printf("%s\n", env[i]);
 	}
