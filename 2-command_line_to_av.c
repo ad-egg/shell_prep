@@ -26,4 +26,5 @@ char **split_string(char *line)
 		token = strtok(NULL, " ");
 	}
 	tokens[i] = NULL;
+	return (tokens);
 }
