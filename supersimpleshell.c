@@ -14,10 +14,12 @@ void supersimpleshell(void)
 	{
 		line = readline();
 		args = split_string(line);
-		
+
 		for (i = 0; args[i] != NULL; i++)
-			printf("%s\n", args[i]);
+			printf("%s", args[i]);
 	}
+	free(line);
+	free(args);
 }
 
 /**

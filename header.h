@@ -10,4 +10,7 @@
 #include <fcntl.h>
 #include <string.h>
 
+char *readline(void);
+char **split_string(char *line);
+int _strcmp(char *s1, char *s2);
 #endif
