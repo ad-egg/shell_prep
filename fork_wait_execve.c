@@ -1,7 +1,4 @@
-#include <unistd.h>
-#include <stdio.h>
-#include <sys/wait.h>
-#include <sys/types.h>
+#include "header.h"
 
 /**
  * executes ls -l /tmp in 5 different child processes

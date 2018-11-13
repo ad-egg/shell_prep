@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <stdlib.h>
+#include "header.h"
 
 /**
  * main - prints all arguments without using ac
