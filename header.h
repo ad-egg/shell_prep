@@ -9,8 +9,11 @@
 #include <sys/wait.h>
 #include <fcntl.h>
 #include <string.h>
+#include <dirent.h>
 
 extern char **environ;
+
+char *_getenv(const char *name);
 
 char *readline(void);
 char **split_string(char *line);
