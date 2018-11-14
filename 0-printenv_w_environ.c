@@ -13,10 +13,9 @@ int main(int ac, char **av, char **env)
 	int i;
 	(void)ac;
 	(void)av;
+	(void)env;
 
 	for (i = 0; environ[i] != NULL; i++)
-	{
-		printf("%s\n", env[i]);
-	}
+		printf("%s\n", environ[i]);
 	return (0);
 }
