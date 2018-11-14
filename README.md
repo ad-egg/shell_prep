@@ -17,4 +17,9 @@ This program prints all the arguments without using `a`.
 This program prints `"$ "`, waits for the user to enter a command, and then prints it on the next line.
 ## 2-command_line_to_av.c
 This function splits a string and returns an array of each word to the string.
-
+## fork_wait_execve.c
+This function makes children processes to execute `ls -l /tmp` 5 times.
+## strcmp.c
+This function compares two strings.
+## supersimpleshell.c
+This is a super simple shell that prints a prompt and what was entered into standard input.
