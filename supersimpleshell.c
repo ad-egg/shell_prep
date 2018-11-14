@@ -8,7 +8,8 @@ void supersimpleshell(void)
 	int status = 1;
 	char *line;
 	char **args;
-	int i;
+	int i, n;
+	char *sp = " ";
 
 	while (status)
 	{
@@ -16,10 +17,11 @@ void supersimpleshell(void)
 		args = split_string(line);
 		for (i = 0; args[i] != NULL; i++)
 		{
+			for (n = 0; args[i][n] != '\0'; n++)
+				;
+			write(STDOUT_FILENO, args[i], n);
 			if (args[i + 1] != NULL)
-				printf("%s ", args[i]);
-			else
-				printf("%s", args[i]);
+				write(STDOUT_FILENO, sp, 1);
 		}
 		free(line);
 		free(args);
