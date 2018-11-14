@@ -8,11 +8,11 @@
  * Return: 0 on success
  */
 
-extern char **environ;
-
 int main(int ac, char **av, char **env)
 {
 	int i;
+	(void)ac;
+	(void)av;
 
 	for (i = 0; environ[i] != NULL; i++)
 	{
