@@ -13,8 +13,11 @@
 
 extern char **environ;
 
+void leave(void);
+int changedir(char *path);
+void print_wd(void);
 char *_getenv(const char *name);
-
+char *find_env_var(char *s1, char *s2);
 char *readline(void);
 char **split_string(char *line);
 int _strcmp(char *s1, char *s2);
