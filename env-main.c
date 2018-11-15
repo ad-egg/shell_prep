@@ -41,7 +41,7 @@ char *_getenv(const char *name)
 }
 
 /**
- * main - prints the environment
+ * main - prints the PATH
  *
  * Return: Always 0.
  */
