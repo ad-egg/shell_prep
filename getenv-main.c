@@ -36,7 +36,10 @@ char *_getenv(const char *name)
 		if (n == 0)
 			break;
 	}
-	here = environ[i];
+	if (environ[i] != NULL)
+		here = environ[i];
+	else
+		here = NULL;
 	return (here);
 }
 
