@@ -39,3 +39,16 @@ char *_getenv(const char *name)
 	here = environ[i];
 	return (here);
 }
+
+/**
+ * getpath - gets the PATH
+ * Return: PATH string
+ */
+char *getpath(void)
+{
+	char *name = "PATH";
+	char *string = NULL;
+
+	string = _getenv(name);	
+	return (datatype);
+}

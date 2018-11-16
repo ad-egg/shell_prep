@@ -13,6 +13,7 @@
 
 extern char **environ;
 
+char *getpath(void);
 void leave(void);
 int changedir(char *path);
 void print_wd(void);
