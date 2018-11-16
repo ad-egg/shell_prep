@@ -13,6 +13,7 @@
 
 extern char **environ;
 
+char **splitpath(char *bath);
 char *getpath(void);
 void leave(void);
 int changedir(char *path);
