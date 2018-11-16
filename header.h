@@ -13,7 +13,6 @@
 
 extern char **environ;
 
-char **splitpath(char *bath);
 char *getpath(void);
 void leave(void);
 int changedir(char *path);
@@ -21,7 +20,7 @@ void print_wd(void);
 char *_getenv(const char *name);
 char *find_env_var(char *s1, char *s2);
 char *readline(void);
-char **split_string(char *line);
+char **split_string(char *line, char *delim);
 int _strcmp(char *s1, char *s2);
 void freedom(char **arrarray, char *str);
 #endif

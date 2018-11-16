@@ -52,23 +52,3 @@ char *getpath(void)
 	string = _getenv(name);	
 	return (string);
 }
-
-/**
- * splitpath - splits the PATH
- */
-char **splitpath(char *bath)
-{
-	char **paths, *road;
-	int i;
-
-	paths = malloc(1024);
-	if (paths == NULL)
-		return (NULL);
-	road = strtok(bath, ":");
-	for (i = 0; paths != NULL; i++)
-	{
-		paths[i] = road;
-		road = strtok(NULL, ":");
-	}
-	return (paths);
-}
