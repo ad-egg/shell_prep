@@ -13,9 +13,8 @@
 
 extern char **environ;
 
+int builtin_commands(char *str);
 char *getpath(void);
-void leave(void);
-int changedir(char *path);
 void print_wd(void);
 char *_getenv(const char *name);
 char *find_env_var(char *s1, char *s2);
