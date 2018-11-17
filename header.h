@@ -13,7 +13,7 @@
 
 extern char **environ;
 
-int builtin_commands(char *str);
+void print_env(void);
 char *getpath(void);
 void print_wd(void);
 char *_getenv(const char *name);
