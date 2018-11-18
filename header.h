@@ -13,6 +13,9 @@
 
 extern char **environ;
 
+void *_itoa(int n, char *str);
+void rev_string(char *s);
+int _strlen(char *s);
 void print_env(void);
 char *getpath(void);
 void print_wd(void);
