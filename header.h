@@ -13,6 +13,8 @@
 
 extern char **environ;
 
+void printerror(char *arg);
+void summon_child(char *file, char **argument);
 void *_itoa(int n, char *str);
 void rev_string(char *s);
 int _strlen(char *s);
