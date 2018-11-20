@@ -43,12 +43,13 @@ int main(void)
 		}
 		for (n = 0; tiles[n] != NULL; n++)
 		{
-			dir = opendir(tiles[n]);
+/*
+use concatenate to append comp to tiles[n] and then try to do the thing
+
+*/			dir = opendir(tiles[n]);
 			if (dir != NULL)
 			{
 				page = readdir(dir);
-				if (_strcmp(comp, page->d_name) == 0)
-					summon_child(tiles[n], args);
 			}
 			closedir(dir);
 		}
